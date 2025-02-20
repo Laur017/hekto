@@ -1,8 +1,17 @@
 <template>
+  <the-header></the-header>
   <h1 class="test">Hai noroc</h1>
 </template>
 
-<script></script>
+<script>
+import TheHeader from "./components/layout/TheHeader.vue";
+
+export default {
+  components: {
+    TheHeader,
+  },
+};
+</script>
 
 <style>
 @import "../src/css/style.css";
