@@ -3,29 +3,29 @@
     <div class="header-navbar__left">
       <img src="../../assets/Logo.png" alt="Logo" />
       <div class="header-navbar__left-pages">
-        <a
-          href="#"
+        <router-link
+          to="/home"
           :class="{ 'active-page': activePage === 'home' }"
           @click="changingPage('home')"
-          >Home</a
+          >Home</router-link
         >
-        <a
-          href="#"
+        <router-link
+          to="/products"
           :class="{ 'active-page': activePage === 'products' }"
           @click="changingPage('products')"
-          >Products</a
+          >Products</router-link
         >
-        <a
-          href="#"
+        <router-link
+          to="/blog"
           :class="{ 'active-page': activePage === 'blog' }"
           @click="changingPage('blog')"
-          >Blog</a
+          >Blog</router-link
         >
-        <a
-          href="#"
+        <router-link
+          to="/contact"
           :class="{ 'active-page': activePage === 'contact' }"
           @click="changingPage('contact')"
-          >Contact</a
+          >Contact</router-link
         >
       </div>
     </div>
