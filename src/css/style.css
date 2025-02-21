@@ -1,5 +1,156 @@
-.test {
-  color: green;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 0.5208333333vw;
+}
+
+body {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#app {
+  width: 100%;
+}
+
+body {
+  font-family: "Josefin Sans", serif;
+  color: #101750;
+}
+
+.btn-default {
+  background-color: #fb2e86;
+  border: none;
+  border-radius: 0.6rem;
+  color: #ffffff;
+  cursor: pointer;
+  flex-grow: 1;
+  height: 100%;
+}
+.btn-default svg {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.btn-default path {
+  fill: #ffffff;
+}
+
+.input-element {
+  border: 1px solid #e5e0fc;
+  width: 32.8rem;
+  height: 4rem;
+  padding: 0.2rem 0.2rem 0.2rem 1.6rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  border-radius: 0.8rem;
+}
+.input-element input {
+  all: unset;
+  font-family: "Lato", serif;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  width: 24.2rem;
+}
+
+::-webkit-input-placeholder {
+  color: #8a8fb9;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.header-info {
+  background-color: #7e33e0;
+  width: 100%;
+  height: 4.8rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.header-info p {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 600;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.header-info svg {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+.header-info svg path {
+  fill: #ffffff;
+}
+.header-info__left {
+  display: flex;
+  gap: 4.8rem;
+}
+.header-info__right {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+.header-info__right a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.header-navbar {
+  width: 70%;
+  height: 7.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-navbar a {
+  text-decoration: none;
+  color: #101750;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2rem;
+  cursor: pointer;
+}
+.header-navbar__left {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+.header-navbar__left-pages {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+  position: relative;
+  top: 0.5rem;
+}
+
+.active-page {
+  color: #fb2e86 !important;
+}
+
+.nofill {
+  fill: none !important;
 }
 
 /*# sourceMappingURL=style.css.map */

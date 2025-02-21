@@ -1,0 +1,18 @@
+.btn-default {
+  background-color: $color-primary;
+  border: none;
+  border-radius: 0.6rem;
+  color: $color-white;
+  cursor: pointer;
+  flex-grow: 1;
+  height: 100%;
+
+  svg {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  path {
+    fill: $color-white;
+  }
+}

@@ -1,15 +1,12 @@
-// @import "abstracts/variables";
+@import "abstracts/variables";
 
-// @import "base/base";
-// @import "base/typography";
-// @import "base/utilities";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
 
-// @import "components/button";
-// @import "components/card";
+@import "components/button";
+@import "components/card";
+@import "components/input";
 
-// @import "layout/navigation";
-// @import "layout/footer";
-
-.test {
-  color: green;
-}
+@import "layout/navigation";
+@import "layout/footer";
