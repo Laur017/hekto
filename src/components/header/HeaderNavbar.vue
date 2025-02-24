@@ -50,22 +50,16 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { computed } from "vue";
 import { useStore } from "vuex";
-export default {
-  components: {},
-  setup() {
-    const store = useStore();
-    const activePage = computed(() => {
-      return store.getters.activePage;
-    });
 
-    const changingPage = (page) => {
-      store.dispatch("setActivePage", { page: page });
-    };
+const store = useStore();
+const activePage = computed(() => {
+  return store.getters.activePage;
+});
 
-    return { activePage, changingPage };
-  },
+const changingPage = (page) => {
+  store.dispatch("setActivePage", { page: page });
 };
 </script>

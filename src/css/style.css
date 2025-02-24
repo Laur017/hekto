@@ -27,6 +27,13 @@ body {
   color: #101750;
 }
 
+.section-title {
+  font-weight: 700;
+  font-size: 4.4rem;
+  line-height: 5.2rem;
+  padding: 2rem 0;
+}
+
 .btn-default {
   background-color: #fb2e86;
   border: none;
@@ -46,6 +53,54 @@ body {
 
 .padding-big {
   padding: 1.6rem 4rem;
+}
+
+.green-btn {
+  background-color: #0cc562;
+  padding: 1.1rem 1.6rem;
+  font-family: inherit;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+}
+
+.card-default {
+  position: relative;
+  width: 30.4rem;
+  border-radius: 0.8rem;
+  box-shadow: 8px 24px 32px -16px rgba(16, 23, 80, 0.1490196078);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+.card-default img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-name,
+.card-price {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 2rem;
+  text-align: center;
+}
+
+.card-description {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #8a8fb9;
+  line-height: 1.6rem;
+  padding: 1rem 0;
+}
+
+.card-name {
+  color: #fb2e86;
+  padding: 2rem 0;
+}
+
+.card-price {
+  padding-bottom: 3rem;
 }
 
 .input-element {
@@ -241,6 +296,82 @@ body {
   text-align: center;
   rotate: -30deg;
   padding: 1rem;
+}
+
+.featured-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8rem 0;
+  gap: 5rem;
+}
+
+.featured-cards {
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 3rem;
+}
+.featured-cards > .card-default:hover {
+  transform: translateY(-5rem);
+}
+.featured-cards button {
+  top: 50%;
+  height: inherit;
+  position: absolute;
+}
+
+.featured-quick-actions {
+  position: absolute;
+  display: flex;
+  gap: 0.5rem;
+  top: 0.5rem;
+  left: 0.5rem;
+}
+.featured-quick-actions span {
+  width: 3.2rem;
+  height: 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.featured-quick-actions span:hover {
+  border-radius: 50%;
+  background-color: #e5e0fc;
+}
+.featured-quick-actions svg {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+.featured-quick-actions path {
+  fill: #7e33e0;
+}
+
+.loading-feature-card {
+  width: 30.4rem;
+  height: 20rem;
+  background-color: #f8f8fd;
+}
+
+.featured-btns {
+  display: flex;
+  gap: 1rem;
+}
+
+.carousel-btn {
+  width: 1.6rem;
+  height: 0.4rem;
+  border-radius: 1rem;
+  background-color: #feb9c4;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carousel-btn-active {
+  width: 2.4rem;
+  height: 0.4rem;
+  border-radius: 1rem;
+  background-color: #fb2e86;
 }
 
 /*# sourceMappingURL=style.css.map */

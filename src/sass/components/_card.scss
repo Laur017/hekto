@@ -1,0 +1,40 @@
+.card-default {
+  position: relative;
+  width: 30.4rem;
+  border-radius: 0.8rem;
+  box-shadow: 8px 24px 32px -16px #10175026;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.5s ease;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.card-name,
+.card-price {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 2rem;
+  text-align: center;
+}
+
+.card-description {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: $color-grey-3;
+  line-height: 1.6rem;
+  padding: 1rem 0;
+}
+
+.card-name {
+  color: $color-primary;
+  padding: 2rem 0;
+}
+
+.card-price {
+  padding-bottom: 3rem;
+}

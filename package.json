@@ -9,6 +9,7 @@
     "watch": "sass --watch --update ./src/sass/style.scss ./src/css/style.css"
   },
   "dependencies": {
+    "axios": "^1.7.9",
     "core-js": "^3.8.3",
     "vue": "^3.2.13",
     "vue-router": "^4.0.13",
