@@ -8,6 +8,7 @@
     <h2 class="section-title">Featured Products</h2>
     <div class="featured-cards" v-if="products">
       <base-card
+        mode="card-default"
         @mouseover="toggleBtn(index, true)"
         @mouseleave="toggleBtn(index, false)"
         v-for="(product, index) in filteredProducts"

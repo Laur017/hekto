@@ -1,7 +1,11 @@
 <template>
-  <div class="card-default">
+  <div :class="mode">
     <slot></slot>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { defineProps } from "vue";
+
+defineProps(["mode"]);
+</script>
