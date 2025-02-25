@@ -2,6 +2,7 @@
   <hero-section></hero-section>
   <featured-section></featured-section>
   <latest-products-section></latest-products-section>
+  <unique-section></unique-section>
 </template>
 
 <script setup>
@@ -10,6 +11,7 @@ import { useStore } from "vuex";
 import HeroSection from "../../components/home/HeroSection.vue";
 import FeaturedSection from "../../components/home/FeaturedSection.vue";
 import LatestProductsSection from "../../components/home/LatestProductsSection.vue";
+import UniqueSection from "../../components/home/UniqueSection.vue";
 
 const store = useStore();
 
