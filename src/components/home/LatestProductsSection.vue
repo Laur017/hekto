@@ -1,19 +1,30 @@
 <template>
-  <div
-    class="featured-section"
-    @keyup.right="handleKeyboardPress('right')"
-    @keyup.left="handleKeyboardPress('left')"
-    tabindex="0"
-  >
-    <h2 class="section-title">Featured Products</h2>
-    <div class="featured-cards" v-if="products">
-      <base-card
+  <div class="latest-section">
+    <h2 class="section-title">Latest Products</h2>
+    <div class="latest-section-navigation">
+      <p :class="{ 'latest-nav-active': latestPage === 0 }" @click="setPage(0)">
+        New Arrival
+      </p>
+      <p :class="{ 'latest-nav-active': latestPage === 1 }" @click="setPage(1)">
+        Best Seller
+      </p>
+      <p :class="{ 'latest-nav-active': latestPage === 2 }" @click="setPage(2)">
+        Featured
+      </p>
+      <p :class="{ 'latest-nav-active': latestPage === 3 }" @click="setPage(3)">
+        Special Offer
+      </p>
+    </div>
+    <div class="latest-section-content">
+      <div
+        class="latest-card"
+        v-for="(prod, index) in products"
+        :key="prod.id"
         @mouseover="toggleBtn(index, true)"
         @mouseleave="toggleBtn(index, false)"
-        v-for="(product, index) in filteredProducts"
-        :key="product.code"
       >
-        <div class="featured-quick-actions" v-if="showBtns[index]">
+        <img src="../../assets/console.png" alt="Console image" />
+        <div class="latest-btns" v-if="showBtns[index]">
           <span>
             <svg
               width="16"
@@ -65,87 +76,48 @@
             </svg>
           </span>
         </div>
-        <img src="../../assets/card-img-watch.png" alt="Featured Watch" />
-        <base-button class="green-btn" v-if="showBtns[index]"
-          >View Details</base-button
-        >
-        <p class="card-name">{{ product.name }}</p>
-        <p class="card-description">{{ product.code }}</p>
-        <p class="card-price">${{ product.price }}</p>
-      </base-card>
-    </div>
-    <div class="featured-cards" v-else>
-      <div class="loading-feature-card"></div>
-      <div class="loading-feature-card"></div>
-      <div class="loading-feature-card"></div>
-      <div class="loading-feature-card"></div>
-    </div>
-    <div class="featured-btns">
-      <span
-        class="carousel-btn"
-        :class="{ 'carousel-btn-active': carouselPage === 0 }"
-        @click="handleCarouselPage(0)"
-      ></span>
-      <span
-        class="carousel-btn"
-        :class="{ 'carousel-btn-active': carouselPage === 1 }"
-        @click="handleCarouselPage(1)"
-      ></span>
-      <span
-        class="carousel-btn"
-        :class="{ 'carousel-btn-active': carouselPage === 2 }"
-        @click="handleCarouselPage(2)"
-      ></span>
-      <span
-        class="carousel-btn"
-        :class="{ 'carousel-btn-active': carouselPage === 3 }"
-        @click="handleCarouselPage(3)"
-      ></span>
+        <div class="latest-card__info">
+          <p>{{ prod.name }}</p>
+          <p>
+            ${{ prod.price }} <span>${{ prod.wasPrice }}</span>
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, watch, computed } from "vue";
 import { useStore } from "vuex";
-import BaseCard from "../ui/BaseCard.vue";
+import { computed, ref, watch } from "vue";
 
 const store = useStore();
 
-const carouselPage = ref(0);
-
-const products = computed(() => store.getters.getProducts);
-const filteredProducts = computed(() =>
-  products.value
-    .filter((el) => el.isFeatured)
-    .slice(carouselPage.value * 4, carouselPage.value * 4 + 4)
-);
+const latestPage = ref(0);
 
 const showBtns = ref([]);
 
+const products = computed(() => {
+  console.log(latestPage.value);
+  if (latestPage.value === 0) {
+    return store.getters.getNewArrival;
+  }
+  if (latestPage.value === 1) {
+    return store.getters.getBestSeller;
+  }
+  if (latestPage.value === 2) {
+    return store.getters.getFeatured;
+  }
+  return store.getters.getSpecialOffer;
+});
 watch(products, () => {
   showBtns.value = new Array(products.value.length).fill(false);
 });
 
-const handleCarouselPage = (num) => {
-  carouselPage.value = num;
+const setPage = (page) => {
+  latestPage.value = page;
 };
 
-const handleKeyboardPress = (direction) => {
-  if (direction === "right") {
-    if (carouselPage.value === 3) {
-      handleCarouselPage(0);
-    } else {
-      handleCarouselPage(carouselPage.value + 1);
-    }
-  } else {
-    if (carouselPage.value === 0) {
-      handleCarouselPage(3);
-    } else {
-      handleCarouselPage(carouselPage.value - 1);
-    }
-  }
-};
 const toggleBtn = (index, value) => {
   showBtns.value[index] = value;
 };

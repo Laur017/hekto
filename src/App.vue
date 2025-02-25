@@ -3,14 +3,16 @@
   <router-view></router-view>
 </template>
 
-<script>
+<script setup>
+import { onMounted } from "vue";
+import { useStore } from "vuex";
 import TheHeader from "./layout/TheHeader.vue";
 
-export default {
-  components: {
-    TheHeader,
-  },
-};
+const store = useStore();
+
+onMounted(() => {
+  store.dispatch("setProducts");
+});
 </script>
 
 <style>

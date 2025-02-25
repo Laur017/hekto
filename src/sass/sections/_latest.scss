@@ -1,0 +1,86 @@
+.latest-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.latest-section-navigation {
+  display: flex;
+  align-items: center;
+  gap: 6.4rem;
+  p {
+    color: $color-black;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    font-weight: 400;
+    font-family: "Lato", sans;
+    cursor: pointer;
+  }
+}
+
+.latest-nav-active {
+  color: $color-primary !important;
+}
+
+.latest-section-content {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+.latest-card {
+  width: 41.6rem;
+  border-radius: 0.4rem;
+  overflow: hidden;
+  position: relative;
+
+  img {
+    object-fit: cover;
+    width: 41.6rem;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0.5rem;
+    p {
+      font-size: 1.6rem;
+
+      span {
+        font-size: 1.4rem;
+        color: $color-primary;
+      }
+    }
+  }
+}
+
+.latest-btns {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  gap: 0.5rem;
+
+  span {
+    width: 3.2rem;
+    height: 3.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $color-grey-2;
+    }
+  }
+
+  path {
+    fill: $color-tertiary;
+  }
+}
