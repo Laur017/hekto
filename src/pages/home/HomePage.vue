@@ -7,6 +7,7 @@
   <discount-section></discount-section>
   <categories-section></categories-section>
   <newsletter-section></newsletter-section>
+  <blog-section></blog-section>
 </template>
 
 <script setup>
@@ -18,4 +19,5 @@ import TrendingSection from "../../components/home/TrendingSection.vue";
 import DiscountSection from "../../components/home/DiscountSection.vue";
 import CategoriesSection from "../../components/home/CategoriesSection.vue";
 import NewsletterSection from "../../components/home/NewsletterSection.vue";
+import BlogSection from "../../components/home/BlogSection.vue";
 </script>
