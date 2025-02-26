@@ -100,12 +100,15 @@ const showBtns = ref([]);
 const products = computed(() => {
   console.log(latestPage.value);
   if (latestPage.value === 0) {
+    console.log(store.getters.getNewArrival);
     return store.getters.getNewArrival;
   }
   if (latestPage.value === 1) {
+    console.log(store.getters.getBestSeller);
     return store.getters.getBestSeller;
   }
   if (latestPage.value === 2) {
+    console.log(store.getters.getFeatured);
     return store.getters.getFeatured;
   }
   return store.getters.getSpecialOffer;

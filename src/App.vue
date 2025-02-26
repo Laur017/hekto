@@ -12,6 +12,7 @@ const store = useStore();
 
 onMounted(() => {
   store.dispatch("setProducts");
+  store.dispatch("setFilters");
 });
 </script>
 

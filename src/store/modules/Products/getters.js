@@ -5,14 +5,14 @@ export default {
 
   getNewArrival(state) {
     const prod = state.products
-      .sort((a, b) => a.createdAt - b.createdAt)
+      .toSorted((a, b) => a.createdAt - b.createdAt)
       .slice(0, 6);
     return prod;
   },
 
   getBestSeller(state) {
     const prod = state.products
-      .sort((a, b) => a.soldTimes - b.soldTimes)
+      .toSorted((a, b) => a.soldTimes - b.soldTimes)
       .slice(0, 6);
 
     return prod;
@@ -25,7 +25,7 @@ export default {
   },
   getSpecialOffer(state) {
     const prod = state.products
-      .sort((a, b) => a.discountPercentage - b.discountPercentage)
+      .toSorted((a, b) => a.discountPercentage - b.discountPercentage)
       .slice(0, 6);
 
     return prod;

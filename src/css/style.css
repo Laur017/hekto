@@ -684,4 +684,72 @@ body {
   z-index: 1;
 }
 
+.catergories-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  margin: 5rem 0;
+}
+
+.section-content {
+  display: flex;
+  gap: 5rem;
+}
+
+.section-content-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  cursor: pointer;
+}
+.section-content-card img {
+  position: relative;
+  width: 27.2rem;
+  height: 27.2rem;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+}
+.section-content-card img:hover {
+  transform: translateY(-2rem) translateX(1rem);
+}
+.section-content-card p {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+}
+.section-content-card::before {
+  position: absolute;
+  content: "";
+  width: 27.2rem;
+  height: 27.2rem;
+  border-radius: 50%;
+  background-color: #8a8fb9;
+}
+.section-content-card button {
+  position: absolute;
+  height: inherit;
+  top: 60%;
+}
+
+.categories-bullets {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.categories-bullets span {
+  width: 0.8rem;
+  height: 0.8rem;
+  border: 1px solid #fb2e86 !important;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.active-category {
+  background-color: #fb2e86;
+}
+
 /*# sourceMappingURL=style.css.map */
