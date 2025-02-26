@@ -312,6 +312,114 @@ body {
   fill: none !important;
 }
 
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e5e0fc;
+}
+.footer__top {
+  padding: 5rem;
+  width: 100%;
+  background-color: #f8f8fd;
+  display: flex;
+  gap: 15rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+.footer__top div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.footer__top div h1 {
+  font-family: Josefin Sans;
+  font-weight: 700;
+  font-size: 2.2rem;
+  line-height: 2.8rem;
+  margin-bottom: 3rem;
+}
+.footer__top div ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.footer__top div li {
+  all: unset;
+  font-family: Lato;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: #8a8fb9;
+  cursor: pointer;
+}
+.footer__top div:nth-child(1) {
+  gap: 3rem;
+}
+.footer__top div:nth-child(1) > div {
+  width: 77%;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+.footer__top div:nth-child(1) > div input {
+  width: 100%;
+}
+.footer__top div:nth-child(1) > div button {
+  font-family: inherit;
+  display: flex;
+  text-align: center;
+  width: 50%;
+  padding: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer__top div:nth-child(1) > p {
+  width: 80%;
+  font-family: Lato;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: #8a8fb9;
+}
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 75%;
+  padding: 2rem;
+}
+.footer__bottom p {
+  font-family: Lato;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  color: #8a8fb9;
+}
+.footer__bottom .social {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.footer__bottom .social span {
+  background-color: #101750;
+  width: 2.4rem;
+  height: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.footer__bottom .social svg {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+.footer__bottom .social path {
+  fill: #ffffff;
+}
+
 .hero-section {
   position: relative;
   background-color: #f2f0ff;
