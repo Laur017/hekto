@@ -5,14 +5,14 @@
 </template>
 
 <script setup>
-import { onMounted } from "vue";
+import { onBeforeMount } from "vue";
 import { useStore } from "vuex";
 import TheHeader from "./layout/TheHeader.vue";
 import TheFooter from "./layout/TheFooter.vue";
 
 const store = useStore();
 
-onMounted(() => {
+onBeforeMount(() => {
   store.dispatch("setProducts");
   store.dispatch("setFilters");
 });

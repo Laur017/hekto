@@ -1,0 +1,71 @@
+.products-filter-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5rem;
+  width: 20%;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    h4 {
+      font-family: Josefin Sans;
+      font-weight: 700;
+      font-size: 2rem;
+      line-height: 2.4rem;
+      padding-bottom: 0.8rem;
+      border-bottom: 1px solid $color-black;
+    }
+    li {
+      display: flex !important;
+      align-items: center !important;
+      gap: 0.8rem !important;
+      all: unset;
+      font-family: Lato;
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 2rem;
+      color: $color-grey-3;
+      cursor: pointer;
+
+      .filter-checkbox {
+        display: inline-block;
+        width: 1.6rem;
+        height: 1.6rem;
+        border-radius: 0.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+          width: 1.25rem;
+          height: 1.25rem;
+        }
+      }
+    }
+  }
+}
+
+.info .filter-checkbox {
+  background-color: $color-info-light;
+  &-checked {
+    background-color: $color-info;
+  }
+}
+.primary .filter-checkbox {
+  background-color: $color-danger-light;
+  &-checked {
+    background-color: $color-primary;
+  }
+}
+.secondary .filter-checkbox {
+  background-color: $color-secondary-light;
+  &-checked {
+    background-color: $color-secondary;
+  }
+}
+
+.ratings-stars {
+  display: flex !important;
+}

@@ -2,6 +2,9 @@ export default {
   getProducts(state) {
     return state.products;
   },
+  getProductsSortedHigh(state) {
+    return state.products.toSorted((a, b) => b.price - a.price);
+  },
 
   getNewArrival(state) {
     const prod = state.products

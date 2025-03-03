@@ -1,7 +1,13 @@
 export default {
-  fetchAllFilters(state) {
-    fetch("http://localhost:3000/filters")
-      .then((res) => res.json())
-      .then((data) => (state.filters = data));
+  fetchAllFilters(state, filters) {
+    state.filters = filters;
+  },
+  addActiveFilter(state, payload) {
+    state.activeFilters.push(payload);
+    console.log(state.activeFilters);
+  },
+  removeActiveFilter(state, payload) {
+    state.activeFilters = state.activeFilters.filter((el) => el !== payload);
+    console.log(state.activeFilters);
   },
 };
