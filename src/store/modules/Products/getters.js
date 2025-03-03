@@ -33,4 +33,12 @@ export default {
 
     return prod;
   },
+
+  getProductById: (state) => (id) => {
+    return state.products.find((el) => el.id.split("-")[0] === id);
+  },
+
+  getRelatedProducts: (state) => (relation) => {
+    return state.products.filter((el) => el.category === relation).slice(0, 4);
+  },
 };

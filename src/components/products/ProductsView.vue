@@ -17,6 +17,7 @@
           currentPage * itemsPerPage + itemsPerPage
         )"
         :key="product.id"
+        @click="navigateToDescription(product.id)"
       >
         <img src="../../assets/products-img.png" alt="prod" />
         <div class="products-flex-card__content">
@@ -151,8 +152,10 @@
 <script setup>
 import { useStore } from "vuex";
 import { computed, ref, watch } from "vue";
+import { useRouter } from "vue-router";
 
 const store = useStore();
+const router = useRouter();
 
 const flexView = computed(() => store.getters.getViewFlex);
 const itemsPerPage = computed(() => store.getters.getItemsPerPage);
@@ -205,4 +208,8 @@ const applyFilters = () => {
 };
 
 watch([products, sortHighToLow, applyFilters], applyFilters);
+
+const navigateToDescription = (id) => {
+  router.push({ path: `/products/${id.split("-")[0]}` });
+};
 </script>
