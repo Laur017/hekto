@@ -78,7 +78,7 @@
           </p>
 
           <div class="products-flex-card__content-btns">
-            <span
+            <span @click="addingToCart(product.code)"
               ><svg
                 width="16"
                 height="16"

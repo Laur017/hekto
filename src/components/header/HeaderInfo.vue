@@ -104,7 +104,7 @@
             fill="#101750"
           /></svg
       ></a>
-      <a href="#"
+      <a href="#" @click="navigate('/cart')"
         ><svg
           width="16"
           height="16"
@@ -129,9 +129,11 @@
   </div>
 </template>
 
-<script>
-export default {
-  components: {},
-  setup() {},
+<script setup>
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+const navigate = (path) => {
+  router.push({ path: path });
 };
 </script>

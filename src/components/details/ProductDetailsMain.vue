@@ -1,5 +1,12 @@
 <template>
   <div class="product-details__main">
+    <div
+      class="item-added-to-cart"
+      :class="{ 'item-added-to-cart-active': itemBought }"
+    >
+      <img src="../../assets/add-to-cart.png" alt="added" />
+      <h1>Item added to cart !</h1>
+    </div>
     <div class="product-details__main-left">
       <div>
         <img src="../../assets/small-details.png" alt="small img details" />
@@ -61,7 +68,9 @@
       </div>
       <p>{{ product.description }}</p>
       <div class="product-details__main-right-buttons">
-        <base-button pad="true"><p>Add To Cart</p></base-button>
+        <base-button pad="true" @click="addingToCart(product)"
+          ><p>Add To Cart</p></base-button
+        >
         <svg
           width="16"
           height="16"
@@ -80,6 +89,24 @@
 </template>
 
 <script setup>
-import { defineProps } from "vue";
+import { defineProps, ref } from "vue";
+import { useStore } from "vuex";
 defineProps(["product"]);
+
+const itemBought = ref(false);
+
+const store = useStore();
+
+const addingToCart = (product) => {
+  itemBought.value = true;
+  store.dispatch("addItemToCart", {
+    code: product.code,
+    name: product.name,
+    price: product.price,
+    count: 1,
+  });
+  setTimeout(() => {
+    itemBought.value = false;
+  }, 1500);
+};
 </script>
