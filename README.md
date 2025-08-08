@@ -1,6 +1,4 @@
 # Hekto E-commerce
-[![Ask DeepWiki](https://devin.ai/assets/askdeepwiki.png)](https://deepwiki.com/Laur017/hekto)
-
 Hekto is a fully-featured e-commerce frontend application built with Vue.js 3. It showcases a modern, component-based architecture for an online store, complete with product listings, advanced filtering, a shopping cart, and detailed product views. The project uses Vuex for state management and Vue Router for seamless navigation.
 
 ## Key Features
