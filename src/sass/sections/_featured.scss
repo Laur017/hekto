@@ -1,0 +1,80 @@
+.featured-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8rem 0;
+  gap: 5rem;
+}
+
+.featured-cards {
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 3rem;
+
+  & > .card-default:hover {
+    transform: translateY(-5rem);
+  }
+
+  & button {
+    top: 50%;
+    height: inherit;
+    position: absolute;
+  }
+}
+
+.featured-quick-actions {
+  position: absolute;
+  display: flex;
+  gap: 0.5rem;
+  top: 0.5rem;
+  left: 0.5rem;
+
+  span {
+    width: 3.2rem;
+    height: 3.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    &:hover {
+      border-radius: 50%;
+      background-color: $color-grey-2;
+    }
+  }
+
+  svg {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
+  path {
+    fill: $color-tertiary;
+  }
+}
+
+.loading-feature-card {
+  width: 30.4rem;
+  height: 20rem;
+  background-color: $color-grey-1;
+}
+
+.featured-btns {
+  display: flex;
+  gap: 1rem;
+}
+
+.carousel-btn {
+  width: 1.6rem;
+  height: 0.4rem;
+  border-radius: 1rem;
+  background-color: $color-danger-light;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carousel-btn-active {
+  width: 2.4rem;
+  height: 0.4rem;
+  border-radius: 1rem;
+  background-color: $color-primary;
+}

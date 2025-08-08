@@ -1,27 +1,23 @@
 <template>
   <the-header></the-header>
-  <h1 class="test">Hai noroc</h1>
+  <router-view :key="$route.fullPath"></router-view>
+  <the-footer></the-footer>
 </template>
 
-<script>
-import TheHeader from "./components/layout/TheHeader.vue";
+<script setup>
+import { onBeforeMount } from "vue";
+import { useStore } from "vuex";
+import TheHeader from "./layout/TheHeader.vue";
+import TheFooter from "./layout/TheFooter.vue";
 
-export default {
-  components: {
-    TheHeader,
-  },
-};
+const store = useStore();
+
+onBeforeMount(() => {
+  store.dispatch("setProducts");
+  store.dispatch("setFilters");
+});
 </script>
 
 <style>
 @import "../src/css/style.css";
-
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>

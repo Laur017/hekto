@@ -1,15 +1,29 @@
-// @import "abstracts/variables";
+@import "abstracts/variables";
 
-// @import "base/base";
-// @import "base/typography";
-// @import "base/utilities";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
 
-// @import "components/button";
-// @import "components/card";
+@import "components/button";
+@import "components/card";
+@import "components/input";
 
-// @import "layout/navigation";
-// @import "layout/footer";
+@import "layout/navigation";
+@import "layout/footer";
 
-.test {
-  color: green;
-}
+@import "pages/products";
+@import "pages/details";
+@import "pages/cart";
+@import "pages/notfound";
+
+@import "sections/hero";
+@import "sections/featured";
+@import "sections/latest";
+@import "sections/unique";
+@import "sections/trending";
+@import "sections/discount";
+@import "sections/categories";
+@import "sections/newsletter";
+@import "sections/blog";
+@import "sections/filters";
+@import "sections/products";

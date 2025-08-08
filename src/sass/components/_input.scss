@@ -1,0 +1,22 @@
+.input-element {
+  border: 1px solid $color-grey-2;
+  width: 32.8rem;
+  height: 4rem;
+  padding: 0.2rem 0.2rem 0.2rem 1.6rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  border-radius: 0.8rem;
+
+  input {
+    all: unset;
+    font-family: "Lato", serif;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    width: 24.2rem;
+  }
+}
+
+::-webkit-input-placeholder {
+  color: $color-grey-3;
+}
